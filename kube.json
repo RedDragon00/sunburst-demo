@@ -1,0 +1,28 @@
+{
+ "name": "Kubernetes",
+ "children": [
+  {
+   "name": "CLI",
+   "children": [
+      { "name": "Kubectl", "value": 500},
+      { "name": "Kubectx", "value": 500},
+      { "name": "Kubens", "value": 500}
+    ]
+   },{
+    "name": "Development",
+    "children": [
+      { "name": "Skaffold", "value": 500},
+      { "name": "Draft", "value": 500},
+      { "name": "Minikube", "value": 500}
+    ]
+    },{
+     "name": "Monitoring tools",
+     "children": [
+       { "name": "Kubebox", "value": 500},
+       { "name": "Kubetail", "value": 500},
+       { "name": "Kubewatch", "value": 200}
+     ]
+     }
+  ]
+}
+
