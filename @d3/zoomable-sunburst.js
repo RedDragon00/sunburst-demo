@@ -13,7 +13,7 @@ export default function define(runtime, observer) {
 
   const g = svg.append("g")
       .attr("transform", `translate(${width / 2},${width / 2})`);
-  g.append("img").attr("src", "kube.png")
+
   const path = g.append("g")
     .selectAll("path")
     .data(root.descendants().slice(1))
@@ -52,7 +52,7 @@ export default function define(runtime, observer) {
         .append("image")
           .attr("x", "65")
           .attr("y", "58")
-          .attr("xlink:href", "kube.png")
+          .attr("xlink:href", "sunburst-demo/kube.png")
   const parent = g.append("circle")
       .datum(root)
       .attr("r", radius)
@@ -111,7 +111,7 @@ export default function define(runtime, observer) {
 }
 );
   main.variable(observer("data")).define("data", ["d3"], function(d3){return(
-d3.json("kube.json")
+d3.json("sunburst-demo/kube.json")
 )});
   main.variable(observer("partition")).define("partition", ["d3"], function(d3){return(
 data => {
