@@ -1,11 +1,6 @@
 // https://observablehq.com/@d3/zoomable-sunburst@343
 export default function define(runtime, observer) {
   const main = runtime.module();
-  main.variable(observer()).define(["md"], function(md){return(
-md`# Zoomable Sunburst
-
-This variant of a [sunburst diagram](/@d3/sunburst) shows only two layers of the hierarchy at a time. Click a node to zoom in, or the center to zoom out. Compare to an [icicle](/@d3/zoomable-icicle).`
-)});
   main.variable(observer("chart")).define("chart", ["partition","data","d3","width","color","arc","format","radius"], function(partition,data,d3,width,color,arc,format,radius)
 {
   const root = partition(data);
@@ -18,7 +13,7 @@ This variant of a [sunburst diagram](/@d3/sunburst) shows only two layers of the
 
   const g = svg.append("g")
       .attr("transform", `translate(${width / 2},${width / 2})`);
-
+  g.append("img").attr("src", "kube.png")
   const path = g.append("g")
     .selectAll("path")
     .data(root.descendants().slice(1))
@@ -46,10 +41,22 @@ This variant of a [sunburst diagram](/@d3/sunburst) shows only two layers of the
       .attr("transform", d => labelTransform(d.current))
       .text(d => d.data.name);
 
+  const defs = g.append("defs")
+    .append("pattern")
+      .attr("id", "wheel")
+      .attr("x", "0")
+      .attr("y", "0")
+      .attr("patternUnits", "objectBoundingBox")
+      .attr("height", "100%")
+      .attr("width", "100%")
+        .append("image")
+          .attr("x", "65")
+          .attr("y", "58")
+          .attr("xlink:href", "kube.png")
   const parent = g.append("circle")
       .datum(root)
       .attr("r", radius)
-      .attr("fill", "none")
+      .attr("fill", "url(#wheel)")
       .attr("pointer-events", "all")
       .on("click", clicked);
 
@@ -104,7 +111,7 @@ This variant of a [sunburst diagram](/@d3/sunburst) shows only two layers of the
 }
 );
   main.variable(observer("data")).define("data", ["d3"], function(d3){return(
-d3.json("/kube.json")
+d3.json("kube.json")
 )});
   main.variable(observer("partition")).define("partition", ["d3"], function(d3){return(
 data => {
@@ -126,7 +133,7 @@ d3.format(",d")
 932
 )});
   main.variable(observer("radius")).define("radius", ["width"], function(width){return(
-width / 6
+width / 10
 )});
   main.variable(observer("arc")).define("arc", ["d3","radius"], function(d3,radius){return(
 d3.arc()

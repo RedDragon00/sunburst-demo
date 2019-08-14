@@ -2,11 +2,33 @@
  "name": "Kubernetes",
  "children": [
   {
+   "name": "Testing",
+   "children": [
+      { "name": "Test suites", "children": [
+          { "name": "Kube-monkey", "value": 500},
+          { "name": "K8s-testsuite", "value": 500},
+          { "name": "Test-infra", "value": 500}
+        ]},
+      { "name": "xxxyyyxxx", "value": 500},
+      { "name": "zzzzpppzzzzz", "value": 500}
+    ]
+   },{
    "name": "CLI",
    "children": [
-      { "name": "Kubectl", "value": 500},
-      { "name": "Kubectx", "value": 500},
-      { "name": "Kubens", "value": 500}
+      { "name": "Productivity", "children": [
+          { "name": "Kubectx", "value": 500},
+          { "name": "Kubens", "value": 500}
+        ]},
+      { "name": "Cluster Management", "children": [
+          { "name": "Kubectl", "value": 500}
+        ]}
+    ]
+   },{
+   "name": "Security",
+   "children": [
+      { "name": "Trireme", "value": 500},
+      { "name": "Aporeto", "value": 500},
+      { "name": "Twistlock", "value": 500}
     ]
    },{
     "name": "Development",
