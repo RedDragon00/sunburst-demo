@@ -111,7 +111,7 @@ export default function define(runtime, observer) {
 }
 );
   main.variable(observer("data")).define("data", ["d3"], function(d3){return(
-d3.json("sunburst-demo/kube.json")
+d3.json("/sunburst-demo/kube.json")
 )});
   main.variable(observer("partition")).define("partition", ["d3"], function(d3){return(
 data => {
