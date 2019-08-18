@@ -35,7 +35,8 @@
     "children": [
       { "name": "Skaffold", "value": 500},
       { "name": "Draft", "value": 500},
-      { "name": "Minikube", "value": 500}
+      { "name": "Minikube", "value": 500},
+      { "name": "Kustomize", "value": 500}
     ]
     },{
      "name": "Monitoring tools",
