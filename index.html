@@ -10,6 +10,12 @@ import notebook from "https://api.observablehq.com/d/ca035be5d7c8974a.js?v=3";
 
 // Load the notebook, observing its cells with a default Inspector
 // that simply renders the value of each cell into the provided DOM node.
-new Runtime().module(notebook, Inspector.into(document.body));
+new Runtime().module(notebook, name => {
+  if (name === "chart") {
+    return new Inspector(document.querySelector("#chart"));
+  }
+});
 
 </script>
+<div id="chart" style="width:70%; height: 70%" />
+</body>
