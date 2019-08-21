@@ -2,11 +2,27 @@
  "name": "Kubernetes",
  "children": [
   {
+   "name": "Cluster Deployment Tools",
+   "children": [
+      { "name": "Kubespray", "value": 500},
+      { "name": "Minikube", "value": 500},
+      { "name": "Kops", "value": 500},
+      { "name": "Bootkube", "value": 500},
+      { "name": "Kube-AWS", "value": 500},
+      { "name": "SimpleKube", "value": 500},
+      { "name": "Juju", "value": 500},
+      { "name": "Conjure-up", "value": 500},
+      { "name": "Amazon EKS", "value": 500},
+      { "name": "Kubeadm", "value": 500}
+    ]
+   },{
    "name": "Testing",
    "children": [
       { "name": "Test suites", "children": [
           { "name": "Kube-monkey", "value": 500},
           { "name": "K8s-testsuite", "value": 500},
+          { "name": "Sonobuoy", "value": 500},
+          { "name": "PowerfulSeal", "value": 500},
           { "name": "Test-infra", "value": 500}
         ]},
       { "name": "xxxyyyxxx", "value": 500},
@@ -28,6 +44,9 @@
    "children": [
       { "name": "Trireme", "value": 500},
       { "name": "Aporeto", "value": 500},
+      { "name": "Sysdig falco", "value": 500},
+      { "name": "Sysdig secure", "value": 500},
+      { "name": "Kubesec.io", "value": 500},
       { "name": "Twistlock", "value": 500}
     ]
    },{
@@ -39,13 +58,30 @@
       { "name": "Kustomize", "value": 500}
     ]
     },{
+    "name": "Serveless / Function",
+    "children": [
+      { "name": "Kubeless", "value": 500},
+      { "name": "Fission", "value": 500},
+      { "name": "Funktion", "value": 500},
+      { "name": "OpenWhisk", "value": 500},
+      { "name": "OpenFAAS", "value": 500},
+      { "name": "Nuclio", "value": 500},
+      { "name": "Virtual-Kubelet", "value": 500},
+      { "name": "Fnproject", "value": 500},
+      { "name": "IronFunction", "value": 500}
+    ]
+    },{
      "name": "Monitoring tools",
      "children": [
        { "name": "Kubebox", "value": 500},
+       { "name": "Kube-ops-view", "value": 500},
        { "name": "Kubetail", "value": 500},
+       { "name": "Weave Scope", "value": 500},
+       { "name": "Searchlight", "value": 500},
+       { "name": "Heapster", "value": 500},
        { "name": "Kubewatch", "value": 200}
      ]
-     }
+    }
   ]
 }
 
