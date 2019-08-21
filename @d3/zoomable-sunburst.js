@@ -52,7 +52,7 @@ export default function define(runtime, observer) {
         .append("image")
           .attr("x", "65")
           .attr("y", "58")
-          .attr("xlink:href", "kube.png")
+          .attr("xlink:href", "https://github.com/RedDragon00/sunburst-demo/blob/master/kube.png")
   const parent = g.append("circle")
       .datum(root)
       .attr("r", radius)
